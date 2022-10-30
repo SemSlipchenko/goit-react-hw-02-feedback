@@ -3,6 +3,7 @@ import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Statistics } from './Statistics/Statistics';
 import { Section } from './Section/Section';
 import { Notification } from './Notification/Notification';
+import { Container } from 'components/App.styled';
 
 class App extends React.Component {
   state = {
@@ -29,7 +30,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <Container>
         <Section title={'Please leave feedback'}>
           <FeedbackOptions
             options={Object.keys(this.state)}
@@ -49,7 +50,7 @@ class App extends React.Component {
             />
           )}
         </Section>
-      </div>
+      </Container>
     );
   }
 }
